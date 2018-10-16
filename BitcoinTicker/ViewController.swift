@@ -1,6 +1,6 @@
 //
 //  SignUPViewController.swift
-//  Puth
+//  BitcoinTicker
 //
 //  Created by Zabeehullah Qayumi on 9/26/18.
 //  Copyright © 2018 Zabeehullah Qayumi. All rights reserved.
@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var finalURL = ""
 
     //Pre-setup IBOutlets
+    
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
@@ -35,11 +36,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         currencyPicker.delegate = self
        
     }
-    
-    
-
-    
-    //TODO: Place your 3 UIPickerView delegate methods here
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -93,7 +89,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     //MARK: - JSON Parsing
-    /***************************************************************/
     
     func updateBitcoinData(json : JSON) {
         
@@ -102,7 +97,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }else{
             bitcoinPriceLabel.text = "Weather Unavailable"
         }
-
 
 }
 }
