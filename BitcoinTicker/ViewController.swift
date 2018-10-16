@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     let curruncySymbol = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
     
-    let selectedCurruncy = ""
+    var selectedCurruncy = ""
     
     var finalURL = ""
 
@@ -98,7 +98,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func updateBitcoinData(json : JSON) {
         
         if let bitcoinResult = json["ask"].double {
-            bitcoinPriceLabel.text = selectedCurruncy + String(bitcoinResult))
+            bitcoinPriceLabel.text = selectedCurruncy + String(" \(bitcoinResult)")
         }else{
             bitcoinPriceLabel.text = "Weather Unavailable"
         }
