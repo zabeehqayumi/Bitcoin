@@ -1,6 +1,6 @@
 //
 //  SignUPViewController.swift
-//  Puth
+//  BitcoinTicker
 //
 //  Created by Zabeehullah Qayumi on 9/26/18.
 //  Copyright © 2018 Zabeehullah Qayumi. All rights reserved.

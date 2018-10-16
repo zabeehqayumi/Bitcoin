@@ -13,6 +13,7 @@ import SwiftyJSON
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
+    
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
     let curruncySymbol = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
@@ -56,12 +57,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    
-    
-
-    
-    
-    
  
 //    //MARK: - Networking
 
@@ -85,9 +80,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     
-    
-    
-    
     //MARK: - JSON Parsing
     
     func updateBitcoinData(json : JSON) {
@@ -95,7 +87,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if let bitcoinResult = json["ask"].double {
             bitcoinPriceLabel.text = selectedCurruncy + String(" \(bitcoinResult)")
         }else{
-            bitcoinPriceLabel.text = "Weather Unavailable"
+            bitcoinPriceLabel.text = "Data Unavailable"
         }
 
 }
