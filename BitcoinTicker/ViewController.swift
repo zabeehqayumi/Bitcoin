@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             .responseJSON { response in
                 if response.result.isSuccess {
 
-                    print("Sucess! Got the Pricesn !!!!")
+                    print("Sucess! Got the Prices!")
                     let bitcoinJSON : JSON = JSON(response.result.value!)
 
                     self.updateBitcoinData(json: bitcoinJSON)
